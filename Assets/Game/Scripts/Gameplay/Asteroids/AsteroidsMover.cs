@@ -3,7 +3,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(CheckViewBounds))]
 [RequireComponent(typeof(Despawn))]
-public class AsteroidsMover : Comment, IGenericCallback
+public class AsteroidsMover : Comment, IGenericCallback, IAsteroidsInit, IAsteroidsMover
 {
     [SerializeField] private float _moveSpeed = 10;
     private Rigidbody _body;
@@ -36,7 +36,7 @@ public class AsteroidsMover : Comment, IGenericCallback
         if (value == gameObject && canDivide)
         {
             // if I am lowest division return
-            if ((int)_myType == 0)
+            if ((int) _myType == 0)
                 return;
 
             // Reduce next division size

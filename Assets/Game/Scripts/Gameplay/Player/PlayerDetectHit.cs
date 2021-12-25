@@ -1,11 +1,12 @@
 using UnityEngine;
 
-public class PlayerDetectHit : TriggerEvents
+public class PlayerDetectHit : TriggerEvents, IGenericCallback
 {
     [SerializeField] private GenericReference<int> _maxLives;
     [SerializeField] private GameEvent _onPlayerGetHit;
     [SerializeField] private GameEvent _gameState;
     private int _currentLives = 0;
+    private bool triggerOnce = false;
 
     protected override void Start()
     {
@@ -15,7 +16,11 @@ public class PlayerDetectHit : TriggerEvents
 
     public override void TriggerEnter(GameObject triggeredObject)
     {
-        // reduce live cound
+        if (triggerOnce)
+            return;
+
+        triggerOnce = true;
+        // reduce live count
         _currentLives--;
         // raise event I am hit
         _onPlayerGetHit.Raise(_currentLives);
@@ -26,5 +31,16 @@ public class PlayerDetectHit : TriggerEvents
 
     public override void TriggerExit(GameObject triggeredObject)
     {
+    }
+
+    public void OnEventRaisedCallback(params object[] param)
+    {
+        GameState _state = (GameState) param[0];
+        switch (_state)
+        {
+            case GameState.Gameplay:
+                triggerOnce = false;
+                break;
+        }
     }
 }

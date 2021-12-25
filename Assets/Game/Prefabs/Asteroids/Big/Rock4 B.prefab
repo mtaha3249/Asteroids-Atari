@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: -2834431044357471732}
   - component: {fileID: 4272618270528475503}
   - component: {fileID: -2953048434779294164}
-  - component: {fileID: 7726834725097270645}
   m_Layer: 11
   m_Name: Rock4 B
   m_TagString: Untagged
@@ -209,31 +208,3 @@ MonoBehaviour:
   _comment: Despawn item after given time.
   _despawnOnEnable: 0
   _despawnTime: 0
---- !u!114 &7726834725097270645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5088785953716078452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55be6458c4d304b8584551be20b2985e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useTag: 0
-  targetTag: 
-  tagetLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  sounds:
-    clip: {fileID: 0}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  _maxLives:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 9ceb4449a1f1c4cd5b51905589aebdd9, type: 2}
-  _onPlayerGetHit: {fileID: 11400000, guid: 355f633fe28b04562b4fb8a94558d62b, type: 2}
-  _gameState: {fileID: 11400000, guid: 3500ee971685341f5956b01f1bc108ba, type: 2}

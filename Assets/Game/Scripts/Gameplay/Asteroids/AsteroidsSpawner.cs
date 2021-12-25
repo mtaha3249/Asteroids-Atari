@@ -91,8 +91,9 @@ public class AsteroidsSpawner : Comment, IGenericCallback
             _spawnedItem = PoolManager.Instance.Spawn(_prefabToSpawn,
                 _asteroidSpawn._spawnPosition, _prefabToSpawn.transform.rotation);
 
-            AsteroidsMover _mover = _spawnedItem.GetComponent<AsteroidsMover>();
-            _mover?.Init(AsteroidType.Big, this);
+            IAsteroidsInit _init = _spawnedItem.GetComponent<IAsteroidsInit>();
+            IAsteroidsMover _mover = _spawnedItem.GetComponent<IAsteroidsMover>();
+            _init?.Init(AsteroidType.Big, this);
             _mover?.MoveAsteroid(_asteroidSpawn._moveDirection);
         }
     }
@@ -171,8 +172,9 @@ public class AsteroidsSpawner : Comment, IGenericCallback
             GameObject _spawnedItem = PoolManager.Instance.Spawn(_prefabToSpawn,
                 _spawnPosition.transform.position + (Vector3.right * i * 2), _prefabToSpawn.transform.rotation);
 
-            AsteroidsMover _mover = _spawnedItem.GetComponent<AsteroidsMover>();
-            _mover?.Init(_typeToSpawn, this);
+            IAsteroidsInit _init = _spawnedItem.GetComponent<IAsteroidsInit>();
+            IAsteroidsMover _mover = _spawnedItem.GetComponent<IAsteroidsMover>();
+            _init?.Init(_typeToSpawn, this);
             _mover?.MoveAsteroid(_spawnPosition.Direction);
         }
     }
