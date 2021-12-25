@@ -9503,7 +9503,6 @@ GameObject:
   - component: {fileID: 7070976307615485469}
   - component: {fileID: 5981589722218683312}
   - component: {fileID: 2145925303869061825}
-  - component: {fileID: 3663961640576810577}
   - component: {fileID: 6408199942051667947}
   - component: {fileID: -168608758493503035}
   - component: {fileID: 8258963402584278727}
@@ -14377,25 +14376,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3663961640576810577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4de088e089c164bb239be84964ea4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseColliders: 1
-  gizmoType: 0
-  alpha: 0.6
-  debugSize: 0.03
-  DebugColor: {r: 1, g: 0.5481836, b: 0, a: 1}
-  DrawAxis: 0
-  AxisSize: 0.65
 --- !u!114 &6408199942051667947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14464,9 +14444,6 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
-  _vibrate:
-    canVibrate: 1
-    _vibrationType: 0
   _hitReward:
     UseConstant: 0
     ConstantValue: 0
@@ -14523,9 +14500,6 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
-  _vibrate:
-    canVibrate: 1
-    _vibrationType: 0
   _maxLives:
     UseConstant: 0
     ConstantValue: 0

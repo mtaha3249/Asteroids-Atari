@@ -90,6 +90,7 @@ public class AsteroidsSpawner : Comment, IGenericCallback
             // spawn and store
             _spawnedItem = PoolManager.Instance.Spawn(_prefabToSpawn,
                 _asteroidSpawn._spawnPosition, _prefabToSpawn.transform.rotation);
+
             AsteroidsMover _mover = _spawnedItem.GetComponent<AsteroidsMover>();
             _mover?.Init(AsteroidType.Big, this);
             _mover?.MoveAsteroid(_asteroidSpawn._moveDirection);
