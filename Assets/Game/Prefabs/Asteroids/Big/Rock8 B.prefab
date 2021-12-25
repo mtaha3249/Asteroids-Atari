@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8663288680691020475}
   - component: {fileID: 5496190899164839650}
   - component: {fileID: -2893814731675105878}
-  - component: {fileID: 7623426819962943163}
   - component: {fileID: -1192868739352649993}
   - component: {fileID: -5521753813742117367}
   - component: {fileID: -5075898226713156635}
@@ -136,20 +135,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 116
   m_CollisionDetection: 2
---- !u!114 &7623426819962943163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5252957863175906491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 664693aaef6a842f499f10b3708708c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _axis: 2
-  Speed: 10
 --- !u!114 &-1192868739352649993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,9 +231,6 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
-  _vibrate:
-    canVibrate: 1
-    _vibrationType: 0
   _maxLives:
     UseConstant: 0
     ConstantValue: 0

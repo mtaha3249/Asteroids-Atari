@@ -11,8 +11,6 @@ public class MainMenu
 [Serializable]
 public class Gameplay
 {
-    public string LevelText = "Level :";
-    public Text levelNumber;
     public GameObject Panel;
 }
 
